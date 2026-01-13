@@ -197,6 +197,7 @@ body {
   word-break: break-word;
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.9);
+  text-transform: capitalize;
 }
 
 /* ✅ Right buttons */
@@ -245,7 +246,7 @@ body {
   font-weight: 700;
   background: rgba(255, 255, 255, 0.06);
   border: 1px dashed rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* ✅ Full screen loader overlay */
