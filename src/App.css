@@ -1,0 +1,342 @@
+/* ✅ Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #0f172a;
+  color: #fff;
+  padding: 50px 16px;
+}
+
+/* ✅ Main Wrapper (If you have a container) */
+
+.todo-app-main h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.todo-app-main {
+  max-width: 600px;
+  margin: auto;
+  background: #111827;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 1px 10px 30px rgb(255 255 255 / 70%);
+}
+
+/* ✅ Form Style */
+.todo-form-zustand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.todo-form-zustand input {
+  width: 100%;
+  padding: 12px 14px !important;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #0b1220;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+.todo-form-zustand input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.todo-form-zustand input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
+
+/* ✅ Buttons Common */
+.todo-form-zustand button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* ✅ Add Button */
+.active-add-btn {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.active-add-btn:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* ✅ Update Button */
+.active-update-btn {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.active-update-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* ✅ Disabled Button */
+.todo-form-zustand button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ✅ Cancel Button */
+.cancel-btn {
+  background: #f59e0b;
+  color: #111;
+}
+
+.cancel-btn:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+}
+
+/* ✅ Filter Section */
+.filtering-data-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.filtering-data-div select {
+  width: 180px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+  background: #0b1220;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.filtering-data-div select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* ✅ Clear Button */
+.clear-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #ef4444;
+  color: #fff;
+  transition: 0.25s;
+}
+
+.clear-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* ✅ Todo List */
+.todo-list-zustand {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ✅ List Item */
+.list-items-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.25s;
+}
+
+.list-items-all:hover {
+  border-color: rgba(34, 197, 94, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ✅ Left side */
+.first-items-list-div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.first-items-list-div input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #22c55e;
+}
+
+.first-items-list-div span {
+  font-size: 15px;
+  font-weight: 500;
+  word-break: break-word;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ✅ Right buttons */
+.items-btnlist-todo {
+  display: flex;
+  gap: 8px;
+}
+
+.items-btnlist-todo button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* ✅ Edit Button */
+.edit-btn {
+  background: #38bdf8;
+  color: #071013;
+}
+
+.edit-btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+}
+
+/* ✅ Delete Button */
+.delete-btn {
+  background: #fb7185;
+  color: #111;
+}
+
+.delete-btn:hover {
+  background: #f43f5e;
+  transform: translateY(-2px);
+}
+
+/* ✅ No Todos */
+.nothing-data-div {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ✅ Full screen loader overlay */
+.fullscreen-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+/* loader box */
+.loader-box {
+  padding: 30px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 8px 30px rgba(235, 235, 235, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 30%;
+  min-height: 30%;
+}
+
+.loader-box p {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ✅ Spinner */
+.spinner {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 6px solid #ddd;
+  border-top: 6px solid #5ca300;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ✅ Responsive */
+@media (max-width: 650px) {
+  .todo-app-main {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .todo-form-zustand {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filtering-data-div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filtering-data-div select,
+  .clear-btn {
+    width: 100%;
+  }
+
+  .list-items-all {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .items-btnlist-todo {
+    width: 100%;
+  }
+
+  .items-btnlist-todo button {
+    flex: 1;
+  }
+}
